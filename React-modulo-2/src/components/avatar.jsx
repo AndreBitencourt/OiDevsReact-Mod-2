@@ -1,7 +1,11 @@
+import { Text } from "../ui/Text"
+
 export const Avatar = () => {
-    return(
+    return (
         <div>
-        Avatar
+            <Text>
+                Avatar
+            </Text>
         </div>
     )
 }

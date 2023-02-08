@@ -1,51 +1,34 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import './App.css'
-
-import { NavItem } from './components/nav-item'
-import { Navbar } from './components/navbar'
-import { Title } from './components/title'
+import { Navbar } from './components/NavBar/navbar'
 import { Header } from './components/header'
-import { Avatar } from './components/avatar'
-import { Text } from './components/Text'
-import { Button } from './components/button'
+//import styled from 'styled-components'
 
+import { Grid, GridItem } from './ui/grid/grid'
 
-const items = [
-  'Página Inicial',
-  'Pesquisa',
-  'Explorar',
-  'Reels',
-  'Mensagens',
-  'Notificações',
-  'Criar',
-  'Perfil',
-  'Mais'
-];
+//display: ${(props) => props.display || 'block'};
+//grid-column: ${(props) => props.gridColumn}
+// const Grid = styled.div`
+// display: grid;
+// height: 100vh;
+// grid-template-columns: 20% 80%;
+// height: 100%;
+// position: relative;
+// `;
+
+// const GridItem = styled.div`
+// position: relative;
+// `;
 
 const App = () => {
-
-  return (
-    <>
-      {/* <Navbar /> */}
-      <Navbar>
-        <Title />
-        {items.map((item) => (
-          <NavItem key={item} text={item} />
-        ))}
-      </Navbar>
-      <Header>
-        <Avatar />
-        <Text bold={true}>@adaTech</Text>
-        <Button>Seguindo</Button>
-        <Button>Enviar Mensagem</Button>
-        <Text>211 publicações</Text>
-        <Text>44,2 mil seguidores</Text>
-        <Text>2 seguindo</Text>
-      </Header>
-    </>
-
-  )
+    return (
+        <Grid>
+            <GridItem>
+                <Navbar />
+            </GridItem>
+            <GridItem>
+                <Header />
+            </GridItem>
+        </Grid>
+    )
 }
 
 export default App
