@@ -20,7 +20,7 @@ import { Grid, GridItem } from './ui/grid/grid'
 
 const App = () => {
     return (
-        <Grid>
+        <Grid templateColumns={'20% 80%'}>
             <GridItem>
                 <Navbar />
             </GridItem>
