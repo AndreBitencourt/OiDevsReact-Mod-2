@@ -1,9 +1,16 @@
-body{
-    margin: 0;
-    height: 100vh;
-    background-color: #131313;
+body {
+  margin: 0;
+  background-color: #131313;
+  height: 100vh;
+  font-family: "Helvetica";
 }
 
-#root{
-    height: 100vh;
+#root {
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }

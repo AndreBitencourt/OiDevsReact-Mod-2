@@ -1,3 +1,1 @@
-export {Text} from './Text'
-
-//export {Text} from './TextSecond'
+export {Text, TextLink} from "./Text";

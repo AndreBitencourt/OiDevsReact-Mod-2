@@ -1,34 +1,30 @@
-import { Navbar } from './components/NavBar/navbar'
-import { Header } from './components/header'
-//import styled from 'styled-components'
+import React, {useEffect} from "react";
+import {Header} from "./components/header";
+import {Highlights} from "./components/highlights/highlights";
+import {Navbar} from "./components/navbar";
+import {fetcher} from "./services";
+import {Grid, GridItem} from "./ui/grid";
 
-import { Grid, GridItem } from './ui/grid/grid'
+function App() {
+  useEffect(() => {
+    const makeRequest = async () => {
+      const response = await fetcher("photos");
+      console.log(response);
+    };
 
-//display: ${(props) => props.display || 'block'};
-//grid-column: ${(props) => props.gridColumn}
-// const Grid = styled.div`
-// display: grid;
-// height: 100vh;
-// grid-template-columns: 20% 80%;
-// height: 100%;
-// position: relative;
-// `;
-
-// const GridItem = styled.div`
-// position: relative;
-// `;
-
-const App = () => {
-    return (
-        <Grid templateColumns={'20% 80%'}>
-            <GridItem>
-                <Navbar />
-            </GridItem>
-            <GridItem>
-                <Header />
-            </GridItem>
-        </Grid>
-    )
+    makeRequest();
+  }, []);
+  return (
+    <Grid>
+      <GridItem>
+        <Navbar />
+      </GridItem>
+      <GridItem>
+        <Header />
+        <Highlights />
+      </GridItem>
+    </Grid>
+  );
 }
 
-export default App
+export default App;
