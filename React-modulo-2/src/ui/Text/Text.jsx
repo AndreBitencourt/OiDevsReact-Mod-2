@@ -12,6 +12,7 @@ export const Text = styled.div`
 
 export const TextLink = styled.a`
   ${textCss};
+  text-decoration: none;
   cursor: pointer;
   &:hover {
     text-decoration: underline;
