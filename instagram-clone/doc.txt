@@ -1,0 +1,20 @@
+info: criar projeto
+cmd: npm create vite 
+opt: ->instagram-clone
+opt: ->React
+opt: ->Js
+
+info: instalar dependências
+cmd: npm install
+
+info: abrir diretório
+cmd: cd instagram-clone
+
+info: iniciar serviços
+cmd: npm run dev
+
+info: instalação material UI
+cmd: npm install @mui/material @mui/styled-engine-sc styled-components
+
+cmd: npm install @mui/icons-material
+
